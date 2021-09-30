@@ -1,0 +1,15 @@
+controller_list:
+  - name: fake_snake_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - motortom2m
+      - joint2
+      - joint4
+      - joint6
+  - name: fake_snake_endeffector_controller
+    type: $(arg execution_type)
+    joints:
+      - end
+initial:  # Define initial robot poses.
+  - group: snake_arm
+    pose: Begin

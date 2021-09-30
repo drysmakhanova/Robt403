@@ -1,0 +1,14 @@
+<launch>
+
+	<arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveItSimpleControllerManager" />
+  	<param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
+  
+ 	 <arg name="use_controller_manager" default="false"/>
+  	<param name="use_controller_manager" value="$(arg use_controller_manager)"/>
+  
+  	<arg name="trajectory_execution/execution_duration_monitoring" default="false" />
+  	<param name="trajectory_execution/execution_duration_monitoring" value="$(arg trajectory_execution/execution_duration_monitoring)"/>
+ 
+  	
+	<rosparam file="$(find snake_moveit)/config/controllers.yaml"/>
+</launch>
